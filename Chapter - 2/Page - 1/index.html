@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INSURE.AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+</head>
+<body class="dark:bg-gray-900 dark:text-white">
+
+  <!-- Container -->
+  <div class="flex flex-col h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between bg-gray-800 px-6 py-4">
+      <!-- Logo -->
+      <div class="text-lg font-bold text-white">INSURE.AI</div>
+
+    <!-- Links -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#" class="text-white hover:text-blue-400 transition">About</a>
+      <a href="#" class="text-white hover:text-blue-400 transition">Privacy Policy</a>
+      <a href="#" class="text-white hover:text-blue-400 transition">Legal Information</a>
+    </div>
+
+
+      <!-- Options -->
+    <div class="flex items-center space-x-4">
+      <select class="bg-gray-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option>EN</option>
+        <option>FR</option>
+        <option>ES</option>
+      </select>
+      <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition">
+        <i class="fas fa-bell text-white"></i>
+      </button>
+      <button onclick="toggleTheme()" class="bg-gray-800 px-4 py-2 rounded hover:bg-gray-700 transition text-white">Dark Mode</button>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex flex-1">
+
+      <!-- Sidebar -->
+      <aside class="flex flex-col bg-gray-900 w-1/6 p-6 text-white">
+        <!-- User Profile -->
+        <div class="flex flex-col items-start mb-6">
+          <img src="https://www.pngitem.com/pimgs/m/508-5087236_tab-profile-f-user-icon-white-fill-hd.png" alt="User Avatar" class="w-20 h-20 rounded-full mb-4">
+          <div class="text-lg font-semibold">VIJAY HARSH, 27 Y.O.</div>
+          <div class="text-sm text-gray-400">3828 Piermont Dr NE<br>KPHB, New Metro station</div>
+          <div class="text-lg font-bold mt-2">Balance: $1,233.23</div>
+        </div>
+
+        <!-- Menu Options -->
+  <nav class="space-y-4">
+    <a href="#" class="flex items-center space-x-4 text-gray-400 hover:bg-gray-800 p-2 rounded">
+      <i class="fas fa-check-circle text-xl text-white"></i>
+      <span>Valid insurance</span>
+    </a>
+    <a href="#" class="flex items-center space-x-4 text-gray-400 hover:bg-gray-800 p-2 rounded">
+      <i class="fas fa-folder text-xl text-white"></i>
+      <span>My documents</span>
+    </a>
+    <a href="#" class="flex items-center space-x-4 text-gray-400 hover:bg-gray-800 p-2 rounded">
+      <i class="fas fa-car text-xl text-white"></i>
+      <span>My vehicles</span>
+    </a>
+    <a href="#" class="flex items-center space-x-4 text-gray-400 hover:bg-gray-800 p-2 rounded">
+      <i class="fas fa-file-alt text-xl text-white"></i>
+      <span>Drafts</span>
+    </a>
+    <a href="#" class="flex items-center space-x-4 text-gray-400 hover:bg-gray-800 p-2 rounded">
+      <i class="fas fa-cog text-xl text-white"></i>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <!-- Insurance Ratio Widget -->
+  <div class="bg-gray-800 p-4 rounded mb-4 mt-6">
+    <div class="flex items-center justify-between">
+      <h3 class="text-2xl font-bold">4.4%</h3>
+      <i class="fas fa-arrow-up-right text-gray-400"></i>
+    </div>
+    <p class="text-sm text-gray-400 mt-2">Your insurance ratio</p>
+  </div>
+
+  <!-- Go Pro Section -->
+  <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-4 rounded text-center">
+    <h2 class="text-lg font-bold">Go Pro</h2>
+    <p class="text-sm text-gray-100 mt-2">Save 5% on insurance benefit calculations</p>
+    <button class="bg-white text-blue-600 font-semibold px-4 py-2 mt-4 rounded">Upgrade</button>
+  </div>  
+
+        </nav>
+      </aside>
+      
+
+      <!-- Main Dashboard -->
+      <div class="flex bg-gray-900 w-full text-white">
+        <!-- Left Menu -->
+        <main class="flex flex-col bg-gray-900 w-3/4 p-6">
+          <!-- Damage Information -->
+          <div class="grid grid-cols-4 gap-4 bg-gray-800 p-4 rounded-lg text-center mb-6">
+            <div>
+              <h2 class="text-2xl font-bold text-blue-500">$790.58</h2>
+              <p class="text-sm text-gray-400">Estimated amount</p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">2 weeks</h2>
+              <p class="text-sm text-gray-400">For review</p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">4 parts</h2>
+              <p class="text-sm text-gray-400">Damaged</p>
+            </div>
+            <div>
+              <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-white font-semibold">
+                Add a crash site
+              </button>
+            </div>
+          </div>
+        
+          <!-- Car View -->
+          <div class="bg-gray-800 p-4 rounded-lg mb-6">
+            <div class="flex justify-between mb-4">
+              <button class="px-4 py-2 bg-gray-700 rounded">3D view</button>
+              <button class="px-4 py-2 bg-gray-700 rounded">Scheme view</button>
+            </div>
+            <div class="flex justify-center">
+              <img src="https://media.discordapp.net/attachments/1320034495449006233/1326822227210932224/9.png?ex=6784c77e&is=678375fe&hm=aca21e1cf8a3077b5ae7c1367aa9ebed3bc7b884f6a46cbb515def49aa2892c5&=&format=webp&quality=lossless&width=852&height=457" alt="3D Car View" class="rounded-lg w-full h-60 object-cover">
+            </div>
+          </div>
+        
+          <!-- Parts Overview Details -->
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">Parts overview</h2>
+            <div class="flex justify-between items-center p-4 border-b border-gray-700">
+              <div class="flex items-center">
+                <img src="https://media.discordapp.net/attachments/1327635713491079302/1327636124499312681/7.png?ex=678471be&is=6783203e&hm=fee3846abafebbbb173f8e17e1b0b7069d7f46d86486393230e99d4db62944c0&=&format=webp&quality=lossless&width=411&height=345" 
+                class="rounded-full mr-2 w-16 h-16"> 
+                           <div>
+                  <h3 class="text-lg font-semibold">Front</h3>
+                  <p class="text-sm text-gray-400">1 damage (scratches, dents)</p>
+                </div>
+              </div>
+              <p class="font-bold">$280.99</p>
+              <button class="bg-gray-700 px-4 py-2 rounded">Customize</button>
+            </div>
+            <div class="flex justify-between items-center p-4 border-b border-gray-700">
+              <div class="flex items-center">
+                <img src="https://media.discordapp.net/attachments/1327635713491079302/1327636121404047430/3_1.png?ex=678471bd&is=6783203d&hm=208f3a165af42907a6504dfa2f3093de2398748c1fefe0be345df0219796ffd0&=&format=webp&quality=lossless&width=346&height=346" 
+                class="rounded-full mr-2 w-16 h-16"> 
+                           <div>
+                  <h3 class="text-lg font-semibold">Left side</h3>
+                  <p class="text-sm text-gray-400">1 damage (deformations, abrasions)</p>
+                </div>
+              </div>
+              <p class="font-bold">$420.90</p>
+              <button class="bg-gray-700 px-4 py-2 rounded">Customize</button>
+            </div>
+          </div>
+        </main>
+        
+      
+
+      <!-- Right Sidebar -->
+<aside class="bg-gray-900 w-1/3 p-4 text-white">
+  <!-- General Information -->
+  <div class="bg-gray-800 p-3 rounded-lg mb-3">
+    <h2 class="text-lg font-bold mb-3">General Information</h2>
+    <div class="flex items-center mb-3">
+      <img src="https://img.freepik.com/premium-vector/set-modern-car-silhouettes-side-view-yellow-neon-car-silhouette-logo-banner-marketing_573718-106.jpg" alt="Car Illustration" class="w-40 h-25 mr-4">
+      <div>
+        <p class="font-semibold text-lg">Bugatti Chiron, 2022  <i class="fab fa-audi"></i></p>
+        <p class="text-sm text-gray-400">8.0L Quad-Turbo, 1500HP • Coupe</p>
+        <p class="text-sm text-gray-400">250 MILES • Gasoline</p>
+      </div>
+    </div>
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-xs bg-gray-700 py-1 px-2 rounded">License Plate: NM-2546</div>
+    </div>
+    <!-- Buttons -->
+    <div class="space-y-4">
+      <button class="bg-gray-700 py-2 px-4 rounded-lg text-left pl-2">
+        <i class="fas fa-id-card mr-2"></i>
+        Driver Information
+      </button>
+      <button class="bg-gray-700 py-2 px-4 rounded-lg text-left pl-2">
+        <i class="fas fa-car mr-2"></i>
+        Car Details
+      </button>
+      <button class="bg-gray-700 py-2 px-4 rounded-lg text-left pl-2">
+        <i class="fas fa-exclamation-circle mr-2"></i>
+        Accident Details
+      </button>
+      <button class="bg-gray-700 py-2 px-4 rounded-lg text-left pl-2">
+        <i class="fas fa-history mr-2"></i>
+        Accident History
+      </button>
+    </div>
+  </div>
+
+  <!-- Uploaded Photos -->
+  <div class="bg-gray-800 p-4 rounded-lg mb-6">
+    <h2 class="text-lg font-bold mb-4">Uploaded Photos (15)</h2>
+    <div class="grid grid-cols-3 gap-2">
+      <img src="https://cdn.discordapp.com/attachments/1320034495449006233/1327637808831004752/image.png?ex=6783ca8f&is=6782790f&hm=f76e5a21b95dae67e068d3ac4643060b97235fd6fc38d5635962ea5485510f95&" alt="Car Photo" class="rounded">
+      <img src="https://media.discordapp.net/attachments/1327635713491079302/1327636122259554427/4_1.png?ex=6783c8fd&is=6782777d&hm=a230142f4b0f1e2b4a50634e434650224021222dcd605133e5e968456466d7f5&=&format=webp&quality=lossless&width=330&height=330" alt="Car Photo" class="rounded">
+      <img src="https://media.discordapp.net/attachments/1327635713491079302/1327636121404047430/3_1.png?ex=6783c8fd&is=6782777d&hm=b08fc4fbd6a8ef24b861f3e5d7737d570ab3f9c305fa865b7586bff7b45b59a9&=&format=webp&quality=lossless&width=346&height=346" alt="Car Photo" class="rounded">
+      <img src="https://media.discordapp.net/attachments/1327635713491079302/1327636123899396097/6_1.png?ex=6783c8fe&is=6782777e&hm=2f2715c7e2c16900c68efdd2e2fa64472a795735a9b1986ee6af0c78cc6b16f3&=&format=webp&quality=lossless&width=362&height=362" alt="Car Photo" class="rounded">
+      <img src="https://cdn.discordapp.com/attachments/1327635713491079302/1327636124809826385/8.png?ex=6783c8fe&is=6782777e&hm=217d1d34439a93604ba7f492a6c505a23ebb1203387ae26426c226c2e4257005&" alt="Car Photo" class="rounded">
+      <img src="https://cdn.discordapp.com/attachments/1327635713491079302/1327635849508294706/image.png?ex=6783c8bc&is=6782773c&hm=87ad5c3673f5f10663aecbc91f37772bbd8ac85798066b3e44e038916c0525e6&" alt="Car Photo" class="rounded">
+    </div>
+    <a href="#" class="text-blue-400 text-sm mt-2 block">View All</a>
+  </div>
+
+  <!-- Service Station Partners -->
+  <div class="bg-gray-800 p-4 rounded-lg">
+    <h2 class="text-lg font-bold mb-4">Service Station Partners</h2>
+    <div class="space-y-4">
+      <div class="flex items-center">
+        <img src="https://cdn.discordapp.com/attachments/1320034495449006233/1326839514521538571/10.png?ex=6784d797&is=67838617&hm=20f68d8f1ca0e3946f13d8c7904eac5e5cff543d069cc45a36ad0fa99b4e08e5&" alt="Service Station Logo" class="rounded-full w-20 h-20 mr-4">
+        <div>
+          <p class="font-semibold text-sm">DJ Automotive Repair</p>
+          <p class="text-xs text-gray-400">3016 Princeton Dr NE, Albuquerque, NM 87107</p>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <img src="https://cdn.discordapp.com/attachments/1320034495449006233/1326839514886438992/11.jpeg?ex=6784d797&is=67838617&hm=c5d98d772b98a930705c0ffb3e02a4c2c0f7fa14926e784a270586082a9d06ba&" alt="Service Station Logo" class="rounded-full w-20 h-20 mr-4">
+        <div>
+          <p class="font-semibold text-sm">Compa Customs</p>
+          <p class="text-xs text-gray-400">Partner Service Station</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Button -->
+  <div class="mt-4">
+    <button class="bg-blue-500 w-full py-3 rounded-lg text-lg font-bold text-white">
+      Go to Checkout
+    </button>
+  </div>
+</aside>
+
+
+    </div>
+  </div>
+</body>
+</html>
